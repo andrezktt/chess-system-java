@@ -23,7 +23,7 @@ public class Program {
                 UserInterface.clearScreen();
                 UserInterface.printMatch(chessMatch, captured);
                 System.out.println();
-                System.out.print("Source: ");
+                System.out.print("Current position: ");
                 ChessPosition source = UserInterface.readChessPosition(scan);
 
                 boolean[][] possibleMoves = chessMatch.possibleMoves(source);
@@ -31,7 +31,7 @@ public class Program {
                 UserInterface.printBoard(chessMatch.getPieces(), possibleMoves);
 
                 System.out.println();
-                System.out.print("Target: ");
+                System.out.print("Target position: ");
                 ChessPosition target = UserInterface.readChessPosition(scan);
 
                 ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
